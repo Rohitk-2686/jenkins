@@ -27,4 +27,15 @@ pipeline{
       }
     }
   }
-}
+  post{
+    always{
+      echo "Executes regardless"
+    }
+    success{
+      echo "Successful CI done."
+    }
+    failure{
+      echo "Failed CI"
+    }
+  }
+  }

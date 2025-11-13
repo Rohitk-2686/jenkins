@@ -1,0 +1,30 @@
+pipeline{
+  agent any
+  tools{
+    jdk "jdk21"
+  }
+
+  stages{
+    stage('Checkout')
+    {
+      steps{
+        git branch:'main', url:"https://github.com/Rohitk-2686/jenkins"
+      }    
+    }
+
+    stage('Compilation'){
+      steps{
+        echo "Compiling the file.."
+        sh "javac Test.java"
+      }
+    }
+
+    stage('Execution')
+    {
+      steps{
+        echo "Executing the file.."
+        sh "java Test.java"
+      }
+    }
+  }
+}

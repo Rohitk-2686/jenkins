@@ -4,7 +4,7 @@ class Test
     {
       int n=10;
       System.out.println("Squares of numbers 1-10:");
-      for(i=1;i<=10;i++)
+      for(int i=1;i<=10;i++)
         {
           int res=i*i;
           System.out.println("Square of "+i+" = "+res);
